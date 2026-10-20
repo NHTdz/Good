@@ -19,6 +19,7 @@ body{background:radial-gradient(120% 80% at 50% 0%, var(--plum), var(--night) 70
 #sky{position:fixed;inset:0;pointer-events:none;z-index:0}
 .stage{position:relative;z-index:1;height:100%;display:grid;place-items:center}
 .scene{display:flex;flex-direction:column;align-items:center;gap:18px;text-align:center;width:min(100%, 420px);max-width:420px;animation:in .7s ease both}
+.scene[hidden]{display:none}
 button{touch-action:manipulation}
 @keyframes in{from{opacity:0;transform:translateY(14px) scale(.98)}}
 .eyebrow{font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold)}
@@ -91,7 +92,7 @@ h1 em{font-style:italic;color:var(--rose)}
 
 <main class="stage">
   <!-- 1. Khóa số -->
-  <section class="scene" id="s-lock" hidden>
+  <section class="scene" id="s-lock">
     <div class="eyebrow">20 · 10 · 2026</div>
     <h1>Một món quà <em>nhỏ</em></h1>
     <p class="hint">Nhập mật khẩu để mở quà</p>
